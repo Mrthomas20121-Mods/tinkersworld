@@ -1,0 +1,100 @@
+# creative tab
+itemGroup.tinkersworld=Tinkers' World
+
+# mining levels
+ui.mininglevel.shivoium=Shivorium
+
+# tooltips
+tinkersworld.tooltip.ore.zirconium=Spawn in stone between y=0 and y=24
+tinkersworld.tooltip.ore.sapphire=Spawn in andesite between y=0 and y=128
+tinkersworld.tooltip.ore.copper=Spawn in stone between y=20 and y=128
+tinkersworld.tooltip.ore.tin=Spawn in stone between y=20 and y=64
+tinkersworld.tooltip.ore.allactite=Spawn in stone between y=5 and y=35
+
+# materials
+material.zirconium.name=Zirconium
+material.zircaloy.name=Zircaloy
+material.shivorium.name=Shivorium
+material.sapphire.name=Sapphire
+material.allactite.name=Allactite
+
+# modifiers/traits
+modifier.tw_lux.name=Lux
+modifier.tw_lux.desc=Wait it's all reparable?\nHave a chance to repair your tool during daytime.
+
+modifier.tw_balance.name=Balance
+modifier.tw_balance.desc=Imagine having a real weapon\nYour Weapon deal less damage over time.
+
+modifier.tw_rust.name=Rust
+modifier.tw_rust.desc=Rust iterators are the best thing since &Bread[..]\nDeal more damage based on the distance between you and the target.
+
+modifier.tw_crystalline.name=Crystalline
+modifier.tw_crystalline.desc=Exp for all!\nBreaking Blocks give xp.
+
+modifier.tw_protect.name=Protect
+modifier.tw_protect.desc=Witherproof!\nProtect from wither effect.
+
+modifier.tw_backburner.name=Backburner
+modifier.tw_backburner.desc=Wait it's Heavy?\nYour Tool is so heavy that it slow you down.
+
+# blocks/items
+tinkersworld.block.zirconium=Zirconium Block
+tinkersworld.ore.zirconium=Zirconium Ore
+tinkersworld.dust.zirconium=Zirconium Dust
+tinkersworld.ingot.zirconium=Zirconium Ingot
+tinkersworld.plate.zirconium=Zirconium Plate
+tinkersworld.gear.zirconium=Zirconium Gear
+tinkersworld.nugget.zirconium=Zirconium Nugget
+fluid.zirconium=Molten Zirconium
+
+tinkersworld.block.zircaloy=Zircaloy Block
+tinkersworld.ore.zircaloy=Zircaloy Ore
+tinkersworld.dust.zircaloy=Zircaloy Dust
+tinkersworld.ingot.zircaloy=Zircaloy Ingot
+tinkersworld.plate.zircaloy=Zircaloy Plate
+tinkersworld.gear.zircaloy=Zircaloy Gear
+tinkersworld.nugget.zircaloy=Zircaloy Nugget
+fluid.zircaloy=Molten Zircaloy
+
+tinkersworld.block.sapphire=Sapphire Block
+tinkersworld.ore.sapphire=Sapphire Ore
+tinkersworld.dust.sapphire=Sapphire Dust
+tinkersworld.ingot.sapphire=Sapphire Ingot
+tinkersworld.plate.sapphire=Sapphire Plate
+tinkersworld.gear.sapphire=Sapphire Gear
+tinkersworld.nugget.sapphire=Sapphire Nugget
+fluid.sapphire=Molten Sapphire
+
+tinkersworld.block.allactite=Allactite Block
+tinkersworld.ore.allactite=Allactite Ore
+tinkersworld.dust.allactite=Allactite Dust
+tinkersworld.ingot.allactite=Allactite Ingot
+tinkersworld.plate.allactite=Allactite Plate
+tinkersworld.gear.allactite=Allactite Gear
+tinkersworld.nugget.allactite=Allactite Nugget
+fluid.allactite=Molten Allactite
+
+tinkersworld.block.tin=Tin Block
+tinkersworld.ore.tin=Tin Ore
+tinkersworld.dust.tin=Tin Dust
+tinkersworld.ingot.tin=Tin Ingot
+tinkersworld.plate.tin=Tin Plate
+tinkersworld.gear.tin=Tin Gear
+tinkersworld.nugget.tin=Tin Nugget
+
+tinkersworld.block.copper=Copper Block
+tinkersworld.ore.copper=Copper Ore
+tinkersworld.dust.copper=Copper Dust
+tinkersworld.ingot.copper=Copper Ingot
+tinkersworld.plate.copper=Copper Plate
+tinkersworld.gear.copper=Copper Gear
+tinkersworld.nugget.copper=Copper Nugget
+
+tinkersworld.block.shivorium=Shivorium Block
+tinkersworld.ore.shivorium=Shivorium Ore
+tinkersworld.dust.shivorium=Shivorium Dust
+tinkersworld.ingot.shivorium=Shivorium Ingot
+tinkersworld.plate.shivorium=Shivorium Plate
+tinkersworld.gear.shivorium=Shivorium Gear
+tinkersworld.nugget.shivorium=Shivorium Nugget
+fluid.shivorium=Molten Shivorium

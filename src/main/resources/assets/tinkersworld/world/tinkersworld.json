@@ -1,0 +1,110 @@
+{
+	"populate": {
+
+		"tw_copper_ore": {
+			"distribution": "uniform",
+			"generator": {
+				"block": "tinkersworld:copper_ore",
+				"material": "minecraft:stone",
+				"cluster-size": 9
+			},
+			"cluster-count": 5,
+			"min-height": 20,
+			"max-height": 128,
+			"retrogen": true,
+			"biome": "all",
+			"dimension": {
+				"restriction": "blacklist",
+				"value": [
+					-1,
+					1
+				]
+			}
+		},
+		"tw_tin_ore": {
+			"distribution": "uniform",
+			"generator": {
+				"block": "tinkersworld:tin_ore",
+				"material": "minecraft:stone",
+				"cluster-size": 8
+			},
+			"cluster-count": 8,
+			"min-height": 20,
+			"max-height": 64,
+			"retrogen": true,
+			"biome": "all",
+			"dimension": {
+				"restriction": "blacklist",
+				"value": [
+					-1,
+					1
+				]
+			}
+		},
+		"tw_allactite_ore": {
+			"distribution": "uniform",
+			"generator": {
+				"block": "tinkersworld:allactite_ore",
+				"material": "minecraft:stone",
+				"cluster-size": 2
+			},
+			"cluster-count": 4,
+			"min-height": 5,
+			"max-height": 35,
+			"retrogen": true,
+			"biome": "all",
+			"dimension": {
+				"restriction": "blacklist",
+				"value": [
+					-1,
+					1
+				]
+			}
+		},
+		"tw_zirconium_ore": {
+			"distribution": "uniform",
+			"generator": {
+				"block": "tinkersworld:zirconium_ore",
+				"material": "minecraft:stone",
+				"cluster-size": 8
+			},
+			"cluster-count": 1,
+			"min-height": 0,
+			"max-height": 24,
+			"retrogen": true,
+			"biome": "all",
+			"dimension": {
+				"restriction": "blacklist",
+				"value": [
+					-1,
+					1
+				]
+			}
+		},
+		"tw_sapphire_ore": {
+			"distribution": "uniform",
+			"generator": {
+				"block": "tinkersworld:sapphire_ore",
+				"material": {
+					"name": "minecraft:stone",
+					"properties": {
+						"variant": "andesite"
+					}
+				},
+				"cluster-size": 5
+			},
+			"cluster-count": 90,
+			"min-height": 0,
+			"max-height": 128,
+			"retrogen": true,
+			"biome": "all",
+			"dimension": {
+				"restriction": "blacklist",
+				"value": [
+					-1,
+					1
+				]
+			}
+		}
+	}
+}

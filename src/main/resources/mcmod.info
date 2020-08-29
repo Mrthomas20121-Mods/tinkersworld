@@ -1,0 +1,15 @@
+[
+{
+  "modid": "tinkersworld",
+  "name": "Tinkers World",
+  "description": "Tinker construct addon",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Mrthomas20121"],
+  "credits": "Mrthomas20121",
+  "logoFile": "",
+  "screenshots": []
+}
+]
