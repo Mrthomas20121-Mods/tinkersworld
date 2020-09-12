@@ -3,6 +3,7 @@ itemGroup.tinkersworld=Tinkers' World
 
 # mining levels
 ui.mininglevel.shivoium=Shivorium
+ui.mininglevel.bivorium=Bivorium
 
 # tooltips
 tinkersworld.tooltip.ore.zirconium=Spawn in stone between y=0 and y=24
@@ -10,11 +11,16 @@ tinkersworld.tooltip.ore.sapphire=Spawn in andesite between y=0 and y=128
 tinkersworld.tooltip.ore.copper=Spawn in stone between y=20 and y=128
 tinkersworld.tooltip.ore.tin=Spawn in stone between y=20 and y=64
 tinkersworld.tooltip.ore.allactite=Spawn in stone between y=5 and y=35
+tinkersworld.tooltip.ore.sulfur=Spawn in netherrack between y=10 and y=118
+tinkersworld.tooltip.ore.bismuth=Spawn in netherrack between y=10 and y=118
 
 # materials
 material.zirconium.name=Zirconium
 material.zircaloy.name=Zircaloy
 material.shivorium.name=Shivorium
+material.bivorium.name=Bivorium
+material.frostium.name=Frostium
+material.froststeel.name=Froststeel
 material.sapphire.name=Sapphire
 material.allactite.name=Allactite
 
@@ -36,6 +42,15 @@ modifier.tw_protect.desc=Witherproof!\nProtect from wither effect.
 
 modifier.tw_backburner.name=Backburner
 modifier.tw_backburner.desc=Wait it's Heavy?\nYour Tool is so heavy that it slow you down.
+
+modifier.tw_pacifist.name=Pacifist
+modifier.tw_pacifist.desc=Violence doesn't solve anything\nCan't harm animals.
+
+modifier.tw_frostfang.name=Frost Fang
+modifier.tw_frostfang.desc=Icy what you did there!\nYour tool get bonuses in cold biomes.
+
+modifier.tw_ivory.name=Ivory
+modifier.tw_ivory.desc=The Irony!\nYou can jump higher but you are glowing.
 
 # blocks/items
 tinkersworld.block.zirconium=Zirconium Block
@@ -59,7 +74,7 @@ fluid.zircaloy=Molten Zircaloy
 tinkersworld.block.sapphire=Sapphire Block
 tinkersworld.ore.sapphire=Sapphire Ore
 tinkersworld.dust.sapphire=Sapphire Dust
-tinkersworld.ingot.sapphire=Sapphire Ingot
+tinkersworld.gem.sapphire=Sapphire Ingot
 tinkersworld.plate.sapphire=Sapphire Plate
 tinkersworld.gear.sapphire=Sapphire Gear
 tinkersworld.nugget.sapphire=Sapphire Nugget
@@ -68,7 +83,7 @@ fluid.sapphire=Molten Sapphire
 tinkersworld.block.allactite=Allactite Block
 tinkersworld.ore.allactite=Allactite Ore
 tinkersworld.dust.allactite=Allactite Dust
-tinkersworld.ingot.allactite=Allactite Ingot
+tinkersworld.gem.allactite=Allactite Ingot
 tinkersworld.plate.allactite=Allactite Plate
 tinkersworld.gear.allactite=Allactite Gear
 tinkersworld.nugget.allactite=Allactite Nugget
@@ -91,10 +106,50 @@ tinkersworld.gear.copper=Copper Gear
 tinkersworld.nugget.copper=Copper Nugget
 
 tinkersworld.block.shivorium=Shivorium Block
-tinkersworld.ore.shivorium=Shivorium Ore
 tinkersworld.dust.shivorium=Shivorium Dust
 tinkersworld.ingot.shivorium=Shivorium Ingot
 tinkersworld.plate.shivorium=Shivorium Plate
 tinkersworld.gear.shivorium=Shivorium Gear
 tinkersworld.nugget.shivorium=Shivorium Nugget
 fluid.shivorium=Molten Shivorium
+
+tinkersworld.block.bivorium=Bivorium Block
+tinkersworld.dust.bivorium=Bivorium Dust
+tinkersworld.ingot.bivorium=Bivorium Ingot
+tinkersworld.plate.bivorium=Bivorium Plate
+tinkersworld.gear.bivorium=Bivorium Gear
+tinkersworld.nugget.bivorium=Bivorium Nugget
+fluid.bivorium=Molten Bivorium
+
+tinkersworld.block.frostium=Frostium Block
+tinkersworld.dust.frostium=Frostium Dust
+tinkersworld.ingot.frostium=Frostium Ingot
+tinkersworld.plate.frostium=Frostium Plate
+tinkersworld.gear.frostium=Frostium Gear
+tinkersworld.nugget.frostium=Frostium Nugget
+fluid.frostium=Molten Frostium
+
+tinkersworld.block.froststeel=Frostium Block
+tinkersworld.dust.froststeel=Froststeel Dust
+tinkersworld.ingot.froststeel=Froststeel Ingot
+tinkersworld.plate.froststeel=Froststeel Plate
+tinkersworld.gear.froststeel=Froststeel Gear
+tinkersworld.nugget.froststeel=Froststeel Nugget
+fluid.froststeel=Molten Froststeel
+
+tinkersworld.block.sulfur=Sulfur Block
+tinkersworld.ore.sulfur=Sulfur Ore
+tinkersworld.dust.sulfur=Sulfur Dust
+tinkersworld.gem.sulfur=Sulfur Ingot
+fluid.sulfur=Molten Sulfur
+
+tinkersworld.block.bismuth=Bismuth Block
+tinkersworld.ore.bismuth=Bismuth Ore
+tinkersworld.dust.bismuth=Bismuth Dust
+tinkersworld.ingot.bismuth=Bismuth Ingot
+tinkersworld.plate.copper=Bismuth Plate
+tinkersworld.gear.copper=Bismuth Gear
+tinkersworld.nugget.copper=Bismuth Nugget
+fluid.bismuth=Molten Bismuth
+
+fluid.coal=Coal

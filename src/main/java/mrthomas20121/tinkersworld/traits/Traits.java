@@ -7,4 +7,7 @@ public class Traits {
     public static final TraitProtect traitProtect = new TraitProtect();
     public static final TraitCrystalline traitCrystalline = new TraitCrystalline();
     public static final TraitBackburner traitBackburner = new TraitBackburner();
+    public static final TraitPacifist traitPacifist = new TraitPacifist();
+    public static final TraitFrostFang traitFrostFang = new TraitFrostFang();
+    public static final TraitIvory traitIvory = new TraitIvory();
 }

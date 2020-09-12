@@ -1,46 +1,96 @@
 {
 	"populate": {
 
-		"tw_copper_ore": {
-			"distribution": "uniform",
-			"generator": {
-				"block": "tinkersworld:copper_ore",
-				"material": "minecraft:stone",
-				"cluster-size": 9
-			},
-			"cluster-count": 5,
-			"min-height": 20,
-			"max-height": 128,
-			"retrogen": true,
-			"biome": "all",
-			"dimension": {
-				"restriction": "blacklist",
-				"value": [
-					-1,
-					1
-				]
-			}
-		},
-		"tw_tin_ore": {
-			"distribution": "uniform",
-			"generator": {
-				"block": "tinkersworld:tin_ore",
-				"material": "minecraft:stone",
-				"cluster-size": 8
-			},
-			"cluster-count": 8,
-			"min-height": 20,
-			"max-height": 64,
-			"retrogen": true,
-			"biome": "all",
-			"dimension": {
-				"restriction": "blacklist",
-				"value": [
-					-1,
-					1
-				]
-			}
-		},
+        "tw_sulfur_ore": {
+          "distribution": "uniform",
+          "generator": {
+            "block": "tinkersworld:sulfur_ore",
+            "material": "minecraft:netherrack",
+            "cluster-size": 14
+          },
+          "cluster-count": 16,
+          "min-height": 10,
+          "max-height": 118,
+          "retrogen": true,
+          "biome": {
+            "restriction": "whitelist",
+            "value": [
+              {
+                "type": "dictionary",
+                "entry": "NETHER"
+              }
+            ]
+          },
+          "dimension": "all"
+        },
+        "tw_bismuth_ore": {
+          "enabled": true,
+          "distribution": "uniform",
+          "generator": {
+            "block": "tinkersworld:bismuth_ore",
+            "material": "minecraft:netherrack",
+            "cluster-size": 8
+          },
+          "cluster-count": 8,
+          "min-height": 10,
+          "max-height": 118,
+          "retrogen": true,
+          "biome": {
+            "restriction": "whitelist",
+            "value": [
+              {
+                "type": "dictionary",
+                "entry": "NETHER"
+              }
+            ]
+          }
+        },
+        "tw_copper_ore": {
+          "enabled": true,
+          "distribution": "uniform",
+          "generator": {
+            "block": {
+              "name": "tinkersworld:copper_ore"
+            },
+            "material": "minecraft:stone",
+            "cluster-size": 8
+          },
+          "cluster-count": 8,
+          "min-height": 20,
+          "max-height": 128,
+          "retrogen": true,
+          "biome": "all",
+          "dimension": {
+            "restriction": "blacklist",
+            "value": [
+              -1,
+              1
+            ]
+          }
+        },
+        "tw_tin_ore": {
+          "enabled": true,
+          "distribution": "uniform",
+          "generator": {
+            "block": {
+              "name": "tinkersworld:tin_ore"
+            },
+            "material": "minecraft:stone",
+            "cluster-size": 8
+          },
+          "cluster-count": 8,
+          "min-height": 20,
+          "max-height": 80,
+          "retrogen": true,
+          "biome": "all",
+          "dimension": {
+            "restriction": "blacklist",
+            "value": [
+              -1,
+              1
+            ]
+          }
+        },
 		"tw_allactite_ore": {
 			"distribution": "uniform",
 			"generator": {

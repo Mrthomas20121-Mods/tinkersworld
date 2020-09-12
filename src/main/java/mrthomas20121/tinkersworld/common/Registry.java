@@ -1,6 +1,7 @@
 package mrthomas20121.tinkersworld.common;
 
 import mrthomas20121.biolib.block.BlockFluid;
+import mrthomas20121.tinkersworld.api.MaterialFluid;
 import mrthomas20121.tinkersworld.objects.blocks.BlockMaterial;
 import mrthomas20121.tinkersworld.objects.items.ItemBlockMaterial;
 import mrthomas20121.tinkersworld.TinkersWorld;
@@ -19,10 +20,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.fluids.BlockFluidBase;
-import net.minecraftforge.fluids.Fluid;
-import net.minecraftforge.fluids.FluidStack;
-import net.minecraftforge.fluids.IFluidBlock;
+import net.minecraftforge.fluids.*;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.registries.IForgeRegistry;
@@ -57,7 +55,17 @@ public class Registry {
                 if( (mat.hasGem() && type.equals(MaterialType.INGOT)) || (!mat.hasGem() && type.equals(MaterialType.GEM))) continue;
                 if (!type.isBlock())
                 {
-                    registerItem(r, new ItemMaterial(mat, type));
+                    if(!mat.equals(Materials.sulfur))
+                    {
+                        registerItem(r, new ItemMaterial(mat, type));
+                    }
+                    else
+                    {
+                        if(type.equals(MaterialType.DUST) || type.equals(MaterialType.GEM))
+                        {
+                            registerItem(r, new ItemMaterial(mat, type));
+                        }
+                    }
                 }
             }
         }
@@ -86,6 +94,10 @@ public class Registry {
                 }
             }
         }
+        for(MaterialFluid materialFluid : Materials.materialFluids)
+        {
+            registerFluidBlock(r, materialFluid.getFluid());
+        }
     }
 
     private static void registerItem(IForgeRegistry<Item> r, ItemMaterial item)
@@ -107,7 +119,7 @@ public class Registry {
         itemBlockMaterials.add(new ItemBlockMaterial(block));
     }
     private static void registerFluidBlock(IForgeRegistry<Block> r, Fluid f) {
-        BlockFluid fluidBlock = new BlockFluid(f);
+        BlockFluidClassic fluidBlock = new BlockFluidClassic(f, Material.LAVA);
         fluidBlock.setRegistryName(TinkersWorld.MODID, "molten_"+f.getName());
         f.setUnlocalizedName(f.getName());
         ItemBlock itemBlock = new ItemBlock(fluidBlock);

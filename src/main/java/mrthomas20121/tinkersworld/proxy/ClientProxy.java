@@ -1,5 +1,6 @@
 package mrthomas20121.tinkersworld.proxy;
 
+import mcp.MethodsReturnNonnullByDefault;
 import mrthomas20121.tinkersworld.common.Registry;
 import mrthomas20121.tinkersworld.common.TinkersMaterials;
 import mrthomas20121.tinkersworld.TinkersWorld;
@@ -29,6 +30,7 @@ import slimeknights.tconstruct.library.modifiers.IModifier;
 import slimeknights.tconstruct.library.tools.IToolPart;
 import slimeknights.tconstruct.library.tools.ToolCore;
 
+import javax.annotation.Nonnull;
 import java.awt.*;
 
 @Mod.EventBusSubscriber(Side.CLIENT)
@@ -81,8 +83,9 @@ public class ClientProxy extends CommonProxy {
         {
             ModelLoader.setCustomModelResourceLocation(itemBlock, 0, new ModelResourceLocation(itemBlock.getRegistryName(), "normal"));
             ModelLoader.setCustomStateMapper(itemBlock.getBlock(), new StateMapperBase() {
+
                 @Override
-                public ModelResourceLocation getModelResourceLocation(IBlockState state) {
+                public ModelResourceLocation getModelResourceLocation(@Nonnull IBlockState state) {
                     return new ModelResourceLocation(itemBlock.getRegistryName(), "normal");
                 }});
         }

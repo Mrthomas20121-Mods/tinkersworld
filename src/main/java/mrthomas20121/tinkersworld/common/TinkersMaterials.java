@@ -28,6 +28,9 @@ public class TinkersMaterials implements ModuleBase {
     public static MaterialBuilder allactite;
     public static MaterialBuilder sapphire;
     public static MaterialBuilder shivorium;
+    public static MaterialBuilder bivorium;
+    public static MaterialBuilder frostium;
+    public static MaterialBuilder froststeel;
 
     @Override
     public void preInit(FMLPreInitializationEvent event) {
@@ -63,7 +66,7 @@ public class TinkersMaterials implements ModuleBase {
         sapphire = Materials.sapphire.getTinkersMat();
         sapphire.setTrait(Traits.traitCrystalline, MaterialTypes.HEAD);
         sapphire.setTrait(Traits.traitBackburner, MaterialTypes.HANDLE);
-        sapphire.setTrait(Traits.traitBackburner, MaterialTypes.EXTRA);
+        sapphire.setTrait(Traits.traitPacifist, MaterialTypes.EXTRA);
         sapphire.setHeadStats(150, 5, 2, Materials.sapphire.getHarvestlevel());
         sapphire.setHandleStats(3f, -100);
         sapphire.setExtraStats(5);
@@ -79,7 +82,35 @@ public class TinkersMaterials implements ModuleBase {
         addCommonModdedItems(shivorium, "Shivorium");
         shivorium.preInit("Shivorium", FluidUtils.getFluid("shivorium"));
 
+        bivorium = Materials.bivorium.getTinkersMat();
+        bivorium.setHeadStats(1500, 10, 9, 6);
+        bivorium.setHandleStats(1.2f, 400);
+        bivorium.setExtraStats(100);
+        bivorium.setTrait(Traits.traitIvory);
+        bivorium.setTrait(Traits.traitRust, MaterialTypes.HANDLE);
+        addCommonModdedItems(bivorium, "Bivorium");
+        bivorium.preInit("Bivorium", FluidUtils.getFluid("bivorium"));
+
+        frostium = Materials.frostium.getTinkersMat();
+        frostium.setHeadStats(1500, 10, 9, 6);
+        frostium.setHandleStats(1.2f, 400);
+        frostium.setExtraStats(100);
+        frostium.setTrait(Traits.traitFrostFang);
+        frostium.setTrait(TinkerTraits.coldblooded, MaterialTypes.HANDLE);
+        addCommonModdedItems(frostium, "Frostium");
+        frostium.preInit("Frostium", FluidUtils.getFluid("frostium"));
+
+        froststeel = Materials.froststeel.getTinkersMat();
+        froststeel.setHeadStats(1500, 11, 10, 6);
+        froststeel.setHandleStats(1.2f, 400);
+        froststeel.setExtraStats(100);
+        froststeel.setTrait(Traits.traitFrostFang, MaterialTypes.HEAD);
+        froststeel.setTrait(TinkerTraits.stiff);
+        addCommonModdedItems(froststeel, "Froststeel");
+        froststeel.preInit("Froststeel", FluidUtils.getFluid("froststeel"));
+
         HarvestLevels.harvestLevelNames.put(5, shivorium.getMat().getTextColor() + Util.translate("ui.mininglevel.shivoium"));
+        HarvestLevels.harvestLevelNames.put(6, bivorium.getMat().getTextColor() + Util.translate("ui.mininglevel.bivorium"));
     }
 
     @Override
@@ -96,6 +127,23 @@ public class TinkersMaterials implements ModuleBase {
                 FluidUtils.getFluidStack("zircaloy", Material.VALUE_Ingot*4),
                 FluidUtils.getFluidStack("zirconium", Material.VALUE_Ingot*7),
                 FluidUtils.getFluidStack("tin", Material.VALUE_Ingot));
+        // bivorium
+        SmelteryUtils.registerAlloy(
+                FluidUtils.getFluidStack("bivorium", Material.VALUE_Ingot),
+                FluidUtils.getFluidStack("bismuth", Material.VALUE_Ingot*7),
+                FluidUtils.getFluidStack("shivorium", Material.VALUE_Ingot));
+        // frostium
+        SmelteryUtils.registerAlloy(
+                FluidUtils.getFluidStack("frostium", Material.VALUE_Ingot*2),
+                FluidUtils.getFluidStack("sulfur", Material.VALUE_Ingot*7),
+                FluidUtils.getFluidStack("bivorium", Material.VALUE_Ingot*2));
+        // froststeel
+        SmelteryUtils.registerAlloy(
+                FluidUtils.getFluidStack("froststeel", Material.VALUE_Ingot*3),
+                FluidUtils.getFluidStack("frostium", Material.VALUE_Ingot*5),
+                FluidUtils.getFluidStack("iron", Material.VALUE_Ingot*3),
+                FluidUtils.getFluidStack("coal", Material.VALUE_Ingot*3)
+        );
     }
 
     @Override

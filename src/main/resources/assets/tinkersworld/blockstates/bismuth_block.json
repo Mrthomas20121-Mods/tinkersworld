@@ -3,7 +3,7 @@
   "defaults": {
     "model": "minecraft:cube_all",
     "textures": {
-      "all": "tinkersworld:blocks/material/tin_ore",
+      "all": "tinkersworld:blocks/material/bismuth_block",
       "particle": "#all"
     }
   },

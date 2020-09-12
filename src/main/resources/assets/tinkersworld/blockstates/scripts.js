@@ -25,6 +25,26 @@ let materials = [
 	},
 	{
 		"name":"shivorium",
+		"alloy":true
+	},
+	{
+		"name":"bivorium",
+		"alloy":true
+	},
+	{
+		"name":"frostium",
+		"alloy":true
+	},
+	{
+		"name":"froststeel",
+		"alloy":true
+	},
+	{
+		"name":"bismuth",
+		"alloy":false
+	},
+	{
+		"name":"sulfur",
 		"alloy":false
 	}
 ]
@@ -33,6 +53,7 @@ for(material of materials)
 {
 	blockstate(material.name, 'block')
 	if(!material.alloy) blockstate(material.name, 'ore')
+	blockstate(material.name, 'molten')
 }
 
 function blockstate(name, type)
@@ -52,5 +73,24 @@ function blockstate(name, type)
 		"inventory": [{}]
 	}
 	}
-	fs.writeFileSync(`./${name}_${type}.json`, JSON.stringify(model, null, 2), 'utf8')
+	if(type == 'molten')
+	{
+		model = {
+		  "forge_marker": 1,
+		  "defaults": {
+			"model": "forge:fluid"
+		  },
+		  "variants": {
+			"normal": [
+			  {
+				"custom": {
+				  "fluid": name.toLowerCase()
+				}
+			  }
+			]
+		  }
+		}
+		fs.writeFileSync(`./${type}_${name}.json`, JSON.stringify(model, null, 2), 'utf8')
+	}
+	else fs.writeFileSync(`./${name}_${type}.json`, JSON.stringify(model, null, 2), 'utf8')
 }
