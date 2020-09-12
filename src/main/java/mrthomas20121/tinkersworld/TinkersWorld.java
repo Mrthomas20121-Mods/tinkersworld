@@ -3,6 +3,7 @@ package mrthomas20121.tinkersworld;
 import mrthomas20121.tinkersworld.common.Materials;
 import mrthomas20121.tinkersworld.common.OredictUtils;
 import mrthomas20121.tinkersworld.common.TinkersMaterials;
+import mrthomas20121.tinkersworld.config.Config;
 import mrthomas20121.tinkersworld.proxy.CommonProxy;
 
 import net.minecraftforge.common.MinecraftForge;
@@ -24,7 +25,7 @@ public class TinkersWorld
     public static TinkersWorld instance;
     public static final String MODID = "tinkersworld";
     public static final String NAME = "Tinkers' World";
-    public static final String VERSION = "1.0.0";
+    public static final String VERSION = "1.0.1";
 
     private static Logger logger;
 
