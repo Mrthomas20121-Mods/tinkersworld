@@ -22,7 +22,7 @@ public class TinkersWorld
     public static TinkersWorld instance;
     public static final String MODID = "tinkersworld";
     public static final String NAME = "Tinkers' World";
-    public static final String VERSION = "1.0.1";
+    public static final String VERSION = "1.0.2";
 
     private static Logger logger;
 
