@@ -1,8 +1,7 @@
 package mrthomas20121.tinkersworld.proxy;
 
-import mcp.MethodsReturnNonnullByDefault;
-import mrthomas20121.tinkersworld.common.Registry;
-import mrthomas20121.tinkersworld.common.TinkersMaterials;
+import mrthomas20121.tinkersworld.Registry;
+import mrthomas20121.tinkersworld.objects.TinkersMaterials;
 import mrthomas20121.tinkersworld.TinkersWorld;
 
 import mrthomas20121.tinkersworld.objects.blocks.BlockMaterial;
@@ -78,16 +77,6 @@ public class ClientProxy extends CommonProxy {
         for(BlockMaterial block: Registry.blocks)
         {
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0 , new ModelResourceLocation(block.getRegistryName(), "inventory"));
-        }
-        for(ItemBlock itemBlock : Registry.blockFluids)
-        {
-            ModelLoader.setCustomModelResourceLocation(itemBlock, 0, new ModelResourceLocation(itemBlock.getRegistryName(), "normal"));
-            ModelLoader.setCustomStateMapper(itemBlock.getBlock(), new StateMapperBase() {
-
-                @Override
-                public ModelResourceLocation getModelResourceLocation(@Nonnull IBlockState state) {
-                    return new ModelResourceLocation(itemBlock.getRegistryName(), "normal");
-                }});
         }
     }
 

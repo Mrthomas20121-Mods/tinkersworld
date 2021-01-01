@@ -2,7 +2,7 @@
 itemGroup.tinkersworld=Tinkers' World
 
 # mining levels
-ui.mininglevel.shivoium=Shivorium
+ui.mininglevel.shivorium=Shivorium
 ui.mininglevel.bivorium=Bivorium
 
 # tooltips
@@ -60,7 +60,7 @@ tinkersworld.ingot.zirconium=Zirconium Ingot
 tinkersworld.plate.zirconium=Zirconium Plate
 tinkersworld.gear.zirconium=Zirconium Gear
 tinkersworld.nugget.zirconium=Zirconium Nugget
-fluid.zirconium=Molten Zirconium
+fluid.zirconium.name=Molten Zirconium
 
 tinkersworld.block.zircaloy=Zircaloy Block
 tinkersworld.ore.zircaloy=Zircaloy Ore
@@ -69,25 +69,25 @@ tinkersworld.ingot.zircaloy=Zircaloy Ingot
 tinkersworld.plate.zircaloy=Zircaloy Plate
 tinkersworld.gear.zircaloy=Zircaloy Gear
 tinkersworld.nugget.zircaloy=Zircaloy Nugget
-fluid.zircaloy=Molten Zircaloy
+fluid.zircaloy.name=Molten Zircaloy
 
 tinkersworld.block.sapphire=Sapphire Block
 tinkersworld.ore.sapphire=Sapphire Ore
 tinkersworld.dust.sapphire=Sapphire Dust
-tinkersworld.gem.sapphire=Sapphire Ingot
+tinkersworld.gem.sapphire=Sapphire Gem
 tinkersworld.plate.sapphire=Sapphire Plate
 tinkersworld.gear.sapphire=Sapphire Gear
 tinkersworld.nugget.sapphire=Sapphire Nugget
-fluid.sapphire=Molten Sapphire
+fluid.sapphire.name=Molten Sapphire
 
 tinkersworld.block.allactite=Allactite Block
 tinkersworld.ore.allactite=Allactite Ore
 tinkersworld.dust.allactite=Allactite Dust
-tinkersworld.gem.allactite=Allactite Ingot
+tinkersworld.gem.allactite=Allactite Gem
 tinkersworld.plate.allactite=Allactite Plate
 tinkersworld.gear.allactite=Allactite Gear
 tinkersworld.nugget.allactite=Allactite Nugget
-fluid.allactite=Molten Allactite
+fluid.allactite.name=Molten Allactite
 
 tinkersworld.block.tin=Tin Block
 tinkersworld.ore.tin=Tin Ore
@@ -111,7 +111,7 @@ tinkersworld.ingot.shivorium=Shivorium Ingot
 tinkersworld.plate.shivorium=Shivorium Plate
 tinkersworld.gear.shivorium=Shivorium Gear
 tinkersworld.nugget.shivorium=Shivorium Nugget
-fluid.shivorium=Molten Shivorium
+fluid.shivorium.name=Molten Shivorium
 
 tinkersworld.block.bivorium=Bivorium Block
 tinkersworld.dust.bivorium=Bivorium Dust
@@ -119,7 +119,7 @@ tinkersworld.ingot.bivorium=Bivorium Ingot
 tinkersworld.plate.bivorium=Bivorium Plate
 tinkersworld.gear.bivorium=Bivorium Gear
 tinkersworld.nugget.bivorium=Bivorium Nugget
-fluid.bivorium=Molten Bivorium
+fluid.bivorium.name=Molten Bivorium
 
 tinkersworld.block.frostium=Frostium Block
 tinkersworld.dust.frostium=Frostium Dust
@@ -127,7 +127,7 @@ tinkersworld.ingot.frostium=Frostium Ingot
 tinkersworld.plate.frostium=Frostium Plate
 tinkersworld.gear.frostium=Frostium Gear
 tinkersworld.nugget.frostium=Frostium Nugget
-fluid.frostium=Molten Frostium
+fluid.frostium.name=Molten Frostium
 
 tinkersworld.block.froststeel=Frostium Block
 tinkersworld.dust.froststeel=Froststeel Dust
@@ -135,13 +135,13 @@ tinkersworld.ingot.froststeel=Froststeel Ingot
 tinkersworld.plate.froststeel=Froststeel Plate
 tinkersworld.gear.froststeel=Froststeel Gear
 tinkersworld.nugget.froststeel=Froststeel Nugget
-fluid.froststeel=Molten Froststeel
+fluid.froststeel.name=Molten Froststeel
 
 tinkersworld.block.sulfur=Sulfur Block
 tinkersworld.ore.sulfur=Sulfur Ore
 tinkersworld.dust.sulfur=Sulfur Dust
-tinkersworld.gem.sulfur=Sulfur Ingot
-fluid.sulfur=Molten Sulfur
+tinkersworld.plate.sulfur=Sulfur Plate
+fluid.sulfur.name=Molten Sulfur
 
 tinkersworld.block.bismuth=Bismuth Block
 tinkersworld.ore.bismuth=Bismuth Ore
@@ -150,6 +150,8 @@ tinkersworld.ingot.bismuth=Bismuth Ingot
 tinkersworld.plate.copper=Bismuth Plate
 tinkersworld.gear.copper=Bismuth Gear
 tinkersworld.nugget.copper=Bismuth Nugget
-fluid.bismuth=Molten Bismuth
+fluid.bismuth.name=Molten Bismuth
 
-fluid.coal=Coal
+fluid.coal.name=Molten Coal
+tinkersworld.plate.coal=Coal Plate
+tinkersworld.dust.coal=Coal Dust

@@ -1,9 +1,7 @@
 package mrthomas20121.tinkersworld;
 
-import mrthomas20121.tinkersworld.common.Materials;
-import mrthomas20121.tinkersworld.common.OredictUtils;
-import mrthomas20121.tinkersworld.common.TinkersMaterials;
-import mrthomas20121.tinkersworld.config.Config;
+import mrthomas20121.tinkersworld.objects.TinkersMaterials;
+import mrthomas20121.tinkersworld.objects.fluids.FluidsTinkersWorld;
 import mrthomas20121.tinkersworld.proxy.CommonProxy;
 
 import net.minecraftforge.common.MinecraftForge;
@@ -17,8 +15,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 @Mod(modid = TinkersWorld.MODID, name = TinkersWorld.NAME, version = TinkersWorld.VERSION,
         dependencies = "required-after:forge@[14.23.5.2847,);"
         + "required-after:mantle@[1.12-1.3.3.55,);"
-        + "required-after:tconstruct@[1.12.2-2.13.0.183,);"
-        + "required-after:biolib@[1.0.7,);")
+        + "required-after:tconstruct@[1.12.2-2.13.0.183,);")
 public class TinkersWorld
 {
     @Mod.Instance
@@ -42,7 +39,7 @@ public class TinkersWorld
         MinecraftForge.EVENT_BUS.register(this);
         logger = event.getModLog();
         proxy.preInit(event);
-        Materials.preInit();
+        FluidsTinkersWorld.init();
         TinkersMaterials.instance.preInit(event);
         WorldLoader.loadWorld(event.getModConfigurationDirectory());
    }
@@ -52,7 +49,6 @@ public class TinkersWorld
     {
         proxy.registerBookData();
         proxy.init(event);
-        OredictUtils.registerOredicts();
         TinkersMaterials.instance.init(event);
     }
     @Mod.EventHandler
