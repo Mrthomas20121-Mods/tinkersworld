@@ -1,15 +1,11 @@
 package mrthomas20121.tinkersworld.objects;
 
-import mrthomas20121.tinkersworld.objects.blocks.BlockMaterial;
-import mrthomas20121.tinkersworld.objects.items.ItemMaterial;
 import mrthomas20121.tinkersworld.traits.Traits;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.oredict.OreDictionary;
-import org.apache.commons.lang3.StringUtils;
 import slimeknights.tconstruct.library.MaterialIntegration;
 import slimeknights.tconstruct.library.TinkerRegistry;
 import slimeknights.tconstruct.library.Util;
@@ -126,6 +122,8 @@ public class TinkersMaterials {
         allactite.setFluid(FluidRegistry.getFluid("allactite"));
         TinkerSmeltery.registerOredictMeltingCasting(FluidRegistry.getFluid("allactite"), "Allactite");
         TinkerSmeltery.registerToolpartMeltingCasting(allactite);
+        TinkerRegistry.registerMelting("gemAllactite", FluidRegistry.getFluid("allactite"), 144);
+        TinkerRegistry.registerTableCasting(OreDictionary.getOres("gemAllactite").get(0), TinkerSmeltery.castGem,  FluidRegistry.getFluid("allactite"), 144);
 
         sapphire.setCraftable(false).setCastable(true);
         sapphire.setRepresentativeItem("gemSapphire");
@@ -133,6 +131,8 @@ public class TinkersMaterials {
         sapphire.setFluid(FluidRegistry.getFluid("sapphire"));
         TinkerSmeltery.registerOredictMeltingCasting(FluidRegistry.getFluid("sapphire"), "Sapphire");
         TinkerSmeltery.registerToolpartMeltingCasting(sapphire);
+        TinkerRegistry.registerMelting("gemSapphire", FluidRegistry.getFluid("sapphire"), 144);
+        TinkerRegistry.registerTableCasting(OreDictionary.getOres("gemSapphire").get(0), TinkerSmeltery.castGem,  FluidRegistry.getFluid("sapphire"), 144);
 
         shivorium.setCraftable(false).setCastable(true);
         shivorium.addCommonItems("Shivorium");
@@ -161,20 +161,6 @@ public class TinkersMaterials {
         TinkerSmeltery.registerOredictMeltingCasting(FluidRegistry.getFluid("sulfur"), "Sulfur");
         TinkerSmeltery.registerOredictMeltingCasting(FluidRegistry.getFluid("coal"), "Coal");
         TinkerSmeltery.registerOredictMeltingCasting(FluidRegistry.getFluid("bismuth"), "Bismuth");
-
-        for(TinkersWorldMaterials material: TinkersWorldMaterials.values()) {
-            for(MaterialType type : MaterialType.values()) {
-                if(type.isBlock()) {
-                    if(material.equals(TinkersWorldMaterials.COAL)) continue;
-                    Block block = BlockMaterial.get(material, type);
-                    if(block != null)OreDictionary.registerOre(type.name().toLowerCase()+StringUtils.capitalize(material.name().toLowerCase()), block);
-                }
-                else {
-                    Item item = ItemMaterial.get(material, type);
-                    if(item != null) OreDictionary.registerOre(type.name().toLowerCase()+StringUtils.capitalize(material.name().toLowerCase()), item);
-                }
-            }
-        }
 
         // shivorium
         TinkerRegistry.registerAlloy(
