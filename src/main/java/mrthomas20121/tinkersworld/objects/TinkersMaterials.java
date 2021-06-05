@@ -1,5 +1,6 @@
 package mrthomas20121.tinkersworld.objects;
 
+import mrthomas20121.tinkersworld.config.ConfigWorld;
 import mrthomas20121.tinkersworld.traits.Traits;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fluids.FluidRegistry;
@@ -32,13 +33,15 @@ public class TinkersMaterials {
     public static final Material froststeel = new Material("froststeel", 0x417CA3);
 
     public void preInit(FMLPreInitializationEvent event) {
-        zirconium.addTrait(Traits.traitLux, MaterialTypes.HEAD);
-        zirconium.addTrait(TinkerTraits.dense);
-        TinkerRegistry.addMaterial(zirconium);
-        TinkerRegistry.addMaterialStats(zirconium,
-                new HeadMaterialStats(500, 6, 6, 3),
-                new HandleMaterialStats(1, 110),
-                new ExtraMaterialStats(-10));
+        if(ConfigWorld.TinkersWorldConfig.zirconium) {
+            zirconium.addTrait(Traits.traitLux, MaterialTypes.HEAD);
+            zirconium.addTrait(TinkerTraits.dense);
+            TinkerRegistry.addMaterial(zirconium);
+            TinkerRegistry.addMaterialStats(zirconium,
+                    new HeadMaterialStats(500, 6, 6, 3),
+                    new HandleMaterialStats(1, 110),
+                    new ExtraMaterialStats(-10));
+        }
 
         zircaloy.addTrait(Traits.traitLux, MaterialTypes.HEAD);
         zircaloy.addTrait(TinkerTraits.dense, MaterialTypes.HANDLE);
@@ -57,22 +60,26 @@ public class TinkersMaterials {
                 new HandleMaterialStats(1, 200),
                 new ExtraMaterialStats(30));
 
-        sapphire.addTrait(Traits.traitCrystalline, MaterialTypes.HEAD);
-        sapphire.addTrait(Traits.traitBackburner, MaterialTypes.HANDLE);
-        sapphire.addTrait(Traits.traitPacifist, MaterialTypes.EXTRA);
-        TinkerRegistry.addMaterial(sapphire);
-        TinkerRegistry.addMaterialStats(sapphire,
-                new HeadMaterialStats(150, 5, 2, 2),
-                new HandleMaterialStats(3, -50),
-                new ExtraMaterialStats(30));
+        if(ConfigWorld.TinkersWorldConfig.sapphire) {
+            sapphire.addTrait(Traits.traitCrystalline, MaterialTypes.HEAD);
+            sapphire.addTrait(Traits.traitBackburner, MaterialTypes.HANDLE);
+            sapphire.addTrait(Traits.traitPacifist, MaterialTypes.EXTRA);
+            TinkerRegistry.addMaterial(sapphire);
+            TinkerRegistry.addMaterialStats(sapphire,
+                    new HeadMaterialStats(150, 5, 2, 2),
+                    new HandleMaterialStats(3, -50),
+                    new ExtraMaterialStats(30));
+        }
 
-        shivorium.addTrait(Traits.traitBalance);
-        shivorium.addTrait(Traits.traitRust, MaterialTypes.HANDLE);
-        TinkerRegistry.addMaterial(shivorium);
-        TinkerRegistry.addMaterialStats(shivorium,
-                new HeadMaterialStats(1500, 8, 11, 5),
-                new HandleMaterialStats(1.2f, 400),
-                new ExtraMaterialStats(100));
+        if(ConfigWorld.TinkersWorldConfig.shivorium) {
+            shivorium.addTrait(Traits.traitBalance);
+            shivorium.addTrait(Traits.traitRust, MaterialTypes.HANDLE);
+            TinkerRegistry.addMaterial(shivorium);
+            TinkerRegistry.addMaterialStats(shivorium,
+                    new HeadMaterialStats(1500, 8, 11, 5),
+                    new HandleMaterialStats(1.2f, 400),
+                    new ExtraMaterialStats(100));
+        }
 
         bivorium.addTrait(Traits.traitIvory);
         bivorium.addTrait(Traits.traitRust, MaterialTypes.HANDLE);
@@ -104,11 +111,13 @@ public class TinkersMaterials {
 
     public void init(FMLInitializationEvent event) {
 
-        zirconium.setCraftable(false).setCastable(true);
-        zirconium.addCommonItems("Zirconium");
-        zirconium.setRepresentativeItem("ingotZirconium");
-        zirconium.setFluid(FluidRegistry.getFluid("zirconium"));
-        new MaterialIntegration(zirconium, FluidRegistry.getFluid("zirconium"), "Zirconium").toolforge().integrate();
+        if(ConfigWorld.TinkersWorldConfig.zirconium) {
+            zirconium.setCraftable(false).setCastable(true);
+            zirconium.addCommonItems("Zirconium");
+            zirconium.setRepresentativeItem("ingotZirconium");
+            zirconium.setFluid(FluidRegistry.getFluid("zirconium"));
+            new MaterialIntegration(zirconium, FluidRegistry.getFluid("zirconium"), "Zirconium").toolforge().integrate();
+        }
 
         zircaloy.setCraftable(false).setCastable(true);
         zircaloy.addCommonItems("Zircaloy");
@@ -125,20 +134,24 @@ public class TinkersMaterials {
         TinkerRegistry.registerMelting("gemAllactite", FluidRegistry.getFluid("allactite"), 144);
         TinkerRegistry.registerTableCasting(OreDictionary.getOres("gemAllactite").get(0), TinkerSmeltery.castGem,  FluidRegistry.getFluid("allactite"), 144);
 
-        sapphire.setCraftable(false).setCastable(true);
-        sapphire.setRepresentativeItem("gemSapphire");
-        sapphire.addCommonItems("Sapphire");
-        sapphire.setFluid(FluidRegistry.getFluid("sapphire"));
-        TinkerSmeltery.registerOredictMeltingCasting(FluidRegistry.getFluid("sapphire"), "Sapphire");
-        TinkerSmeltery.registerToolpartMeltingCasting(sapphire);
-        TinkerRegistry.registerMelting("gemSapphire", FluidRegistry.getFluid("sapphire"), 144);
-        TinkerRegistry.registerTableCasting(OreDictionary.getOres("gemSapphire").get(0), TinkerSmeltery.castGem,  FluidRegistry.getFluid("sapphire"), 144);
+        if(ConfigWorld.TinkersWorldConfig.sapphire) {
+            sapphire.setCraftable(false).setCastable(true);
+            sapphire.setRepresentativeItem("gemSapphire");
+            sapphire.addCommonItems("Sapphire");
+            sapphire.setFluid(FluidRegistry.getFluid("sapphire"));
+            TinkerSmeltery.registerOredictMeltingCasting(FluidRegistry.getFluid("sapphire"), "Sapphire");
+            TinkerSmeltery.registerToolpartMeltingCasting(sapphire);
+            TinkerRegistry.registerMelting("gemSapphire", FluidRegistry.getFluid("sapphire"), 144);
+            TinkerRegistry.registerTableCasting(OreDictionary.getOres("gemSapphire").get(0), TinkerSmeltery.castGem,  FluidRegistry.getFluid("sapphire"), 144);
+        }
 
-        shivorium.setCraftable(false).setCastable(true);
-        shivorium.addCommonItems("Shivorium");
-        shivorium.setRepresentativeItem("ingotShivorium");
-        shivorium.setFluid(FluidRegistry.getFluid("shivorium"));
-        new MaterialIntegration(shivorium, FluidRegistry.getFluid("shivorium"), "Shivorium").toolforge().integrate();
+        if(ConfigWorld.TinkersWorldConfig.shivorium) {
+            shivorium.setCraftable(false).setCastable(true);
+            shivorium.addCommonItems("Shivorium");
+            shivorium.setRepresentativeItem("ingotShivorium");
+            shivorium.setFluid(FluidRegistry.getFluid("shivorium"));
+            new MaterialIntegration(shivorium, FluidRegistry.getFluid("shivorium"), "Shivorium").toolforge().integrate();
+        }
 
         bivorium.setCraftable(false).setCastable(true);
         bivorium.addCommonItems("Bivorium");
@@ -150,13 +163,13 @@ public class TinkersMaterials {
         frostium.setRepresentativeItem("ingotFrostium");
         frostium.addCommonItems("Frostium");
         frostium.setFluid(FluidRegistry.getFluid("frostium"));
-        new MaterialIntegration(froststeel, FluidRegistry.getFluid("frostium"), "Frostium").toolforge().integrate();
+        new MaterialIntegration(frostium, FluidRegistry.getFluid("frostium"), "Frostium").toolforge().integrate();
 
         froststeel.setCraftable(false).setCastable(true);
         froststeel.setRepresentativeItem("ingotFroststeel");
         froststeel.addCommonItems("Froststeel");
         froststeel.setFluid(FluidRegistry.getFluid("froststeel"));
-        new MaterialIntegration(zircaloy, FluidRegistry.getFluid("froststeel"), "Froststeel").toolforge().integrate();
+        new MaterialIntegration(froststeel, FluidRegistry.getFluid("froststeel"), "Froststeel").toolforge().integrate();
 
         TinkerSmeltery.registerOredictMeltingCasting(FluidRegistry.getFluid("sulfur"), "Sulfur");
         TinkerSmeltery.registerOredictMeltingCasting(FluidRegistry.getFluid("coal"), "Coal");

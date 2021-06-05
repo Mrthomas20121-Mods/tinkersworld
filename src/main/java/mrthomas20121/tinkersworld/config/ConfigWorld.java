@@ -1,14 +1,11 @@
 package mrthomas20121.tinkersworld.config;
 
 import mrthomas20121.tinkersworld.TinkersWorld;
-import mrthomas20121.tinkersworld.proxy.CommonProxy;
 import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.ConfigManager;
-import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import org.apache.logging.log4j.Level;
 
 @Mod.EventBusSubscriber(modid = TinkersWorld.MODID)
 public class ConfigWorld {
@@ -28,5 +25,7 @@ public class ConfigWorld {
         public static boolean sapphire = true;
 
         public static boolean shivorium = true;
+
+        public static boolean zirconium = true;
     }
 }

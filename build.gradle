@@ -3,7 +3,7 @@ buildscript {
         jcenter()
         maven {
             name = "forge"
-            url = "http://files.minecraftforge.net/maven"
+            url = "http://maven.minecraftforge.net/"
         }
         maven {
             name = "sonatype"
@@ -18,10 +18,6 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle.forge'
 
 repositories {
-    maven { // The repo from which to get waila
-        name "Mobius Repo"
-        url "http://tehnut.info/maven"
-    }
     maven { 
         name "slimeknight maven"
         url "http://dvs1.progwml6.com/files/maven"
@@ -45,9 +41,14 @@ repositories {
         name "Craftweaker"
         url "https://maven.blamejared.com"
     }
+
+    removeIf { it instanceof MavenArtifactRepository && it.url.host == 'files.minecraftforge.net' }
+    maven {
+        url "https://maven.minecraftforge.net/"
+    }
 }
 
-version = "1.0.3"
+version = "1.0.5"
 group= "mrthomas20121.tinkersworld"
 archivesBaseName = "tinkersworld"
 
